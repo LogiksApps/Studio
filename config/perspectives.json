@@ -1,10 +1,10 @@
 {
 	"LIST": {
 		"studio": {
-			"title": "CMS Classic",
+			"title": "Classic",
 			"sidebar": {
-			    "cms": {
-			        "title": "CMS",
+			    "studio": {
+			        "title": "Studio",
 			        "icon": "fa fa-cubes fa-fw",
 			        "src":"sidebarMenu"
 			    },
@@ -16,10 +16,10 @@
 			}
 		},
 		"studio1": {
-			"title": "CMS Advanced",
+			"title": "Advanced",
 			"sidebar": {
-			    "cms": {
-			        "title": "CMS",
+			    "studio": {
+			        "title": "Studio",
 			        "icon": "fa fa-cubes fa-fw",
 			        "src":"sidebarMenu"
 			    },
@@ -39,7 +39,7 @@
 			"title": "Developer",
 			"sidebar": {
 			    "cms": {
-			        "title": "CMS",
+			        "title": "Studio",
 			        "icon": "fa fa-cubes fa-fw",
 			        "src":"sidebarMenu"
 			    },
@@ -55,16 +55,16 @@
 			    }
 			}
 		},
-		"studio": {
+		"studio2": {
 			"title": "Studio",
 			"sidebar": {
-			    "cms": {
-			        "title": "CMS",
+			    "studio": {
+			        "title": "Studio",
 			        "icon": "fa fa-cubes fa-fw",
 			        "src":"sidebarMenu"
 			    },
 			    "mods": {
-			        "title": "MODS",
+			        "title": "Modules",
 			        "icon": "fa fa-cube fa-fw",
 			        "src":"sidebarModules"
 			    }

@@ -237,9 +237,9 @@ button#leftMenuOpen,button#leftMenuOpen:hover,button#leftMenuOpen:focus {
 #pgsidebar .list-group-item .fa {
     margin-top: 7px;
     font-size: 12px;
-    margin-right: -7px;
-    margin-left: 10px;
-    color: #766e6e;
+    margin-right: 5px;
+    margin-left: 0px;
+    color: white;
 }
 i.actionBtn {
     font-size: 16px;
