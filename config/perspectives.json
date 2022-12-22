@@ -38,7 +38,7 @@
 		"developer": {
 			"title": "Developer",
 			"sidebar": {
-			    "cms": {
+			    "studio": {
 			        "title": "Studio",
 			        "icon": "fa fa-cubes fa-fw",
 			        "src":"sidebarMenu"

@@ -615,7 +615,7 @@ switch($_REQUEST["action"]) {
                     printServiceMsg(["msg"=>"Finalizing the installation","nextstep"=>"completed","refid"=>$refid]);
                     break;
                 case "completed":
-                    printServiceMsg(["msg"=>"App Installation is complete<br>Reload the page for updating the cms dropdown","refid"=>$refid]);
+                    printServiceMsg(["msg"=>"App Installation is complete<br>Reload the page for updating the studio dropdown","refid"=>$refid]);
                     break;
                 default:
                     printServiceMsg(["error"=>"Installation Failed, Wrong StepID","refid"=>$refid]);
@@ -632,7 +632,7 @@ function getSiteList() {
 	unset($arr[0]);unset($arr[1]);
 	$out=array();
 	foreach($arr as $a=>$b) {
-	    if($b=="cms" || $b=="studio") continue;
+	  if($b=="studio") continue;
 		if(is_file(ROOT.APPS_FOLDER.$b)) {
 			unset($arr[$a]);
 		} elseif(is_dir(ROOT.APPS_FOLDER.$b) && !file_exists(ROOT.APPS_FOLDER.$b."/apps.cfg")) {

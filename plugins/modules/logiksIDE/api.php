@@ -212,7 +212,7 @@ if(!function_exists("getCompsList")) {
         $file = false;
         $title = "";
         
-        //http://logiks.dev.silkdemo.in/modules/cmsEditor?site=cms&forsite=portal&type=edit&src=%2Fservices%2Fverify.php
+        //http://logiks.dev.silkdemo.in/modules/cmsEditor?site=studio&forsite=portal&type=edit&src=%2Fservices%2Fverify.php
         switch($type) {
             case "services":
             case "service":

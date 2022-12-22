@@ -23,9 +23,6 @@ switch($_REQUEST['srctype']) {
     			["path"=>"apps", "name"=>"Application",]
     		 ];
 		break;
-	case "cms":
-		$cfgDir=ROOT.APPS_FOLDER."cms/".CFG_FOLDER;
-		break;
 	case "studio":
 		$cfgDir=ROOT.APPS_FOLDER."studio/".CFG_FOLDER;
 		break;

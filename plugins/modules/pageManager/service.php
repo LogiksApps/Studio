@@ -406,7 +406,7 @@ function fInfo($f,$relativePath) {
 	$info['title']=toTitle($info['name']);
 
 	$info['edit']="";
-	//http://logiks.com/modules/cmsEditor?site=cms&forsite=default&type=edit&src=%2Fpages%2Fcomps%2FtestComp.tpl
+	//http://logiks.com/modules/cmsEditor?site=studio&forsite=default&type=edit&src=%2Fpages%2Fcomps%2FtestComp.tpl
 
 	return $info;
 }
