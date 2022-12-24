@@ -256,5 +256,18 @@ if(!function_exists("getCompsList")) {
         if(!$title) $title = $file;
         return ["title"=>$title, "type"=>strtolower($_REQUEST["typekey"]), "path"=>"{$basePath}{$file}", "icon"=>"file"];
     }
+    
+    function getFileCountInDir($f) {
+        if(file_exists($f)) {
+            $fs = scandir($f);
+            return count($fs)-2;
+        }
+        return 0;
+    }
+    function getDBRecordsCount($tbl, $dbKey="app", $where = []) {
+        $data = _db($dbKey)->_selectQ($tbl, "count(*) as count", $where)->_get();
+        if($data) return $data[0]["count"];
+        return 0;
+    }
 }
 ?>
