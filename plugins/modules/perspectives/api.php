@@ -73,7 +73,8 @@ if(!function_exists("perspectives_list")) {
             $_SESSION['SESSION_PERSPECTIVE_DEFAULT'] = "studio";
         }
         
-        return $configJSON['LIST'];
+        if(!isset($configJSON['LIST'])) return [];
+        else return $configJSON['LIST'];
     }
     
     function perspectives_headers() {

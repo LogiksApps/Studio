@@ -242,9 +242,11 @@ function loadDBStatus() {
   $("#dbStatus").load(_service("dbEdit","panel")+"&dkey="+dkey+"&panel=status");
 }
 function saveSchema2() {
+    waitingDialog.show();
     var filters = $("#save_schema_db_filter").val();
     if(filters==null) filters = [];
     processAJAXPostQuery(_service("dbEdit","dumpSchema")+"&dkey="+dkey, "filter="+filters.join(","),function(txt) {
+        waitingDialog.hide();
 		lgksAlert(txt);
 	});
 }

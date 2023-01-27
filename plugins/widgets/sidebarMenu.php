@@ -10,7 +10,25 @@ $menuTree3=generateNavigationFromDir(APPROOT."misc/menus/studio/","core");
 
 $menuTree=array_merge_recursive($menuTree1,$menuTree2);
 $menuTree=array_merge_recursive($menuTree,$menuTree3);
-// printArray($menuTree2);exit("A");
+
+$finalList = [];
+$finalTree = [];
+foreach($menuTree as $a=>$subtree) {
+    foreach($subtree as $b=>$menuItem) {
+        if(!isset($menuItem["weight"]) || !is_numeric($menuItem["weight"])) $menuItem["weight"] = 100;
+        
+        if(!isset($finalList[$a])) $finalList[$a] = $menuItem["weight"];
+        elseif($finalList[$a]>$menuItem["weight"]) {
+            $finalList[$a] = $menuItem["weight"];
+        }
+    }
+}
+asort($finalList);
+foreach($finalList as $cat=>$b) {
+    $finalTree[$cat] = $menuTree[$cat];
+}
+$menuTree = $finalTree;
+// printArray([$finalList, $finalTree, $menuTree]);exit("A");
 ?>
 <style>
 .sidebarMenu {
@@ -32,7 +50,7 @@ $menuTree=array_merge_recursive($menuTree,$menuTree3);
       echo "  <div class='panel-heading' role='tab' id='$hash'>";
       echo "    <h4 class='panel-title'>";
       echo "      <a role='button' data-toggle='collapse' data-parent='#sidebarMenu' href='#collapse{$hash}' aria-expanded='true' aria-controls='collapseOne'>";
-      echo "        $category";
+      echo "        <i class='fa fa-folder'></i> $category";
       echo "      </a>";
       echo "      <i class='fa fa-angle-right pull-right'></i>";
       echo "    </h4>";

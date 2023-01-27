@@ -45,7 +45,7 @@ printPageComponent(false,[
 			"changeDatabase"=>["type"=>"dropdown","tips"=>"Change Database","options"=>$dbList, "title"=>ucwords($default)],
 			"refresh"=>["icon"=>"<i class='fa fa-refresh'></i>"],
 			
-			["title"=>"Search Table ...","type"=>"search","align"=>"right","class"=>"onsidebarActive","tips"=>"Search individual column by -> column:term"],
+			["title"=>"Search Word or Column:Word ...","type"=>"search","align"=>"right","class"=>"onsidebarActive","tips"=>"Search individual column by -> column:term"],
 
 			"dbInfo"=>["icon"=>"<i class='fa fa-info-circle'></i>","tips"=>"Database info","align"=>"right"],
 			""=>["icon"=>"<i class='fa fa-table'></i>","tips"=>"Database tables","align"=>"right"],

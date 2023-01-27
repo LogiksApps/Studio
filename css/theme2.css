@@ -129,7 +129,8 @@ body{
     color: #000;
 }
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
-    padding: 12px !important;
+    /*padding: 12px !important;*/
+    padding: 6px 5px !important;
 }
 #componentTree a, #componentSpace a{
     color: #000;
@@ -170,7 +171,7 @@ table thead{
     white-space: nowrap;
 }
 .actions2 i,.actions2 a,.action i,.action a,.actionCol i,.actionCol a,.actionbtns i,.actionbtns a{
-    background: #EFEFEF;
+    /*background: #EFEFEF;*/
     text-align: center;
     margin-right: 5px;
     margin-left: 5px;
@@ -308,4 +309,10 @@ i.actionBtn {
 }
 .navbar-top-links li:last-child {
     margin-right: 5px;
+}
+
+.pageCompToolBar .navbar-nav li .gg {
+    margin-top: 4px;
+    margin-right: 2px;
+    float: left;
 }

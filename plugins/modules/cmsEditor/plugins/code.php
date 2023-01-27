@@ -68,7 +68,7 @@ if($_REQUEST['ext']=="inc") {
 <div id='editorToolbar'>
 	<a href="#" class="btn" cmd="trash" title="Delete"><i class="icon fa fa-trash"></i></a>
 	|
-	<a href="#" class="btn" cmd="history" title="History of file"><i class="icon fa fa-clock-o"></i></a>
+	<a href="#" class="btn" cmd="history" title="History of file"><i class="icon fa fa-clock"></i></a>
 	<a href="#" class="btn" cmd="save" title="Save"><i class="icon fa fa-save"></i></a>
   <a href="#" class="btn" cmd="beautify" title="Format"><i class="icon fa fa-code"></i></a>
 	<input name='fname' style='width:40%;' value='<?=$_REQUEST['src']?>' data-original='<?=$_REQUEST['src']?>' />
