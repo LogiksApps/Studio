@@ -83,11 +83,11 @@ printPageComponent(false,[
 		<td>{{access}}</td>
 		<td>
 			<i class="fa fa-pencil cmdAction pull-left" cmd="editApp" appkey="{{appkey}}" title="Edit App"></i>
-      <i class="fa fa-gear cmdAction pull-left" cmd="configureApp" appkey="{{appkey}}" title="Configure App"></i>
+            <i class="fa fa-gear cmdAction pull-left" cmd="configureApp" appkey="{{appkey}}" title="Configure App"></i>
       
-			<a href="{{url}}" target=_blank class="pull-left fa fa-eye" title="Preview"></a>
+			<a href="{{url}}" target=_blank class="pull-left fa fa-globe" title="Preview"></a>
       
-      <i class="fa fa-eraser cmdAction pull-left" cmd="flushCache" appkey="{{appkey}}" title="Purge Cache for App"></i>
+            <i class="fa fa-eraser cmdAction pull-left" cmd="flushCache" appkey="{{appkey}}" title="Purge Cache for App"></i>
       
 			
 			{{{actionBtns this}}}

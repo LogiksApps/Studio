@@ -24,7 +24,8 @@ switch($_REQUEST['srctype']) {
     		 ];
 		break;
 	case "studio":
-		$cfgDir=ROOT.APPS_FOLDER."studio/".CFG_FOLDER;
+	case "cms":
+		$cfgDir=ROOT.APPS_FOLDER.APPNAME."/".CFG_FOLDER;
 		break;
 	case "plugins":
 		$cfgDir=CMS_APPROOT.CFG_FOLDER."features/";

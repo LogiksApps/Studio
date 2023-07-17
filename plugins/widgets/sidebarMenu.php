@@ -29,6 +29,11 @@ foreach($finalList as $cat=>$b) {
 }
 $menuTree = $finalTree;
 // printArray([$finalList, $finalTree, $menuTree]);exit("A");
+
+function sortMenus($a,$b) {
+    if ($a['weight']==$b['weight']) return 0;
+    return ($a['weight']<$b['weight'])?-1:1;
+}
 ?>
 <style>
 .sidebarMenu {
@@ -58,6 +63,7 @@ $menuTree = $finalTree;
       echo "  <div id='collapse{$hash}' class='panel-collapse collapse' role='tabpanel' aria-labelledby='$hash'>";
       echo "    <div class='panel-body'>";
       
+      usort($menuSet, "sortMenus");
       foreach ($menuSet as $key => $menu) {
         $more=[];
         if($menu['target']!=null && strlen($menu['target'])>0) {
