@@ -45,3 +45,6 @@
 	display: inline-block;
 }
 #toolbtn_editTemplate {display:none;}
+#pgsidebar .list-group-item .fa {
+    color: #666666;
+}

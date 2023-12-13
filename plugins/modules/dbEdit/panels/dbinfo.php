@@ -140,7 +140,7 @@ foreach($tables as $tbl) {
         <div class='col-xs-12' style='margin-top: 20px;'>
     		<div class='col-md-6'>
     		    <label>Select Table Keys that needs to have its data saved?</label>
-    		    <select class='form-control select' id='save_schema_db_filter' multiple>
+    		    <select class='form-control select' id='save_schema_db_filter' multiple style="height: 70%;">
     		        <?php
     		            foreach($finalTableFilterList as $tbl=>$count) {
     		              //  if($tbl=="do" || $tbl=="data")
@@ -151,9 +151,11 @@ foreach($tables as $tbl) {
     		            
     		        ?>
     		    </select>
-    		    <hr>
+    		</div>
+    		<div class='col-md-6'>
+    		    <br><br><br><br>
     		    <div class='text-center'>
-    		        <button class='btn btn-default save_schema2' title='Save Schema to SQL Folder usefull for migration scripts'><i class='fa fa-file-export'></i> Save Schema</button>
+    		        <button class='btn btn-info save_schema2' title='Save Schema to SQL Folder usefull for migration scripts'><i class='fa fa-file-export'></i> Save Schema</button>
     		    </div>
     		</div>
     	</div>

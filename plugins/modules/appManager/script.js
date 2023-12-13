@@ -139,8 +139,8 @@ $(function() {
 				break;
       case "restoreApp":
 				lgksMsg("<ul class='list-group' style='padding-right:15px'>"+
-            "<div class='list-group-item'><button class='btn btn-warning' onclick='restoreApp(1,this)' data-app='"+app+"'><i class='fa fa-undo'></i> Restore</button> Restore the app and clear from archive</div>"+
-            "<div class='list-group-item'><button class='btn btn-danger' onclick='restoreApp(2,this)' data-app='"+app+"'><i class='fa fa-undo'></i> Restore</button> Restore the app and still keep in archive</div>"+
+            "<div class='list-group-item'><button class='btn btn-danger' onclick='restoreApp(2,this)' data-app='"+app+"'><i class='fa fa-undo'></i> Restore</button> Restore the app and clear from archive</div>"+
+            "<div class='list-group-item'><button class='btn btn-warning' onclick='restoreApp(1,this)' data-app='"+app+"'><i class='fa fa-undo'></i> Restore</button> Restore the app and still keep in archive</div>"+
             "</div>","Restore App");
 				break;
       case "renameApp":

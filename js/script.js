@@ -139,8 +139,8 @@ $.fn.extend({
 function openEStore() {
     openLinkFrame("eStore", _link("modules/pluginManager"), true);
 }
-function openCMSTodos() {
-    openLinkFrame("Todos", _link("modules/cmsTodos"), true);
+function openDevTodos() {
+    openLinkFrame("Todos", _link("modules/devTodos"), true);
 }
 
 function dataInfo(type, val) {

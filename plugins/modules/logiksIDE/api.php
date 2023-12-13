@@ -10,17 +10,17 @@ if(!function_exists("getCompsList")) {
         switch(CMS_APPS_TYPE) {
             case "website":
                 $data = [
-                    "Page"=>[
+                    "page"=>[
                         "label"=>"Pages",
                         "icon"=>"window-maximize",
                         "groups"=>false,
                     ],
-                    "Controller"=>[
+                    "controller"=>[
                         "label"=>"Controllers",
                         "icon"=>"code",
                         "groups"=>false,
                     ],
-                    "Helper"=>[
+                    "helper"=>[
                         "label"=>"Helpers",
                         "icon"=>"star",
                         "groups"=>false,
@@ -36,21 +36,33 @@ if(!function_exists("getCompsList")) {
                         "groups"=>true,
                         "help_link"=>"https://github.com/Logiks/Logiks-Core/wiki/Services"
                     ],
+                    "apisource"=>[
+                        "label"=>"API Sources",
+                        "icon"=>"link",
+                        "groups"=>true,
+                        "dependent_module"=>"apibox",
+                        "help_link"=>"https://github.com/Logiks/Logiks-Core/wiki/Services"
+                    ]
                 ];
                 break;
             case "webapp":case "webportal":
                 $data = [
                     "User_Flow"=>[
+                        "label"=>"Flowboard",
+                        "icon"=>"fas fa-project-diagram",
+                        "groups"=>false,
+                    ],
+                    "navigations"=>[
                         "label"=>"Navigations",
                         "icon"=>"bars",
                         "groups"=>false,
                     ],
-                    "Controller"=>[
+                    "controller"=>[
                         "label"=>"Controllers",
                         "icon"=>"code",
                         "groups"=>false,
                     ],
-                    "Helper"=>[
+                    "helper"=>[
                         "label"=>"Helpers",
                         "icon"=>"star",
                         "groups"=>false,
@@ -66,21 +78,28 @@ if(!function_exists("getCompsList")) {
                         "groups"=>true,
                         "help_link"=>"https://github.com/Logiks/Logiks-Core/wiki/Services"
                     ],
+                    "apisource"=>[
+                        "label"=>"API Sources",
+                        "icon"=>"link",
+                        "groups"=>true,
+                        "dependent_module"=>"apibox",
+                        "help_link"=>"https://github.com/Logiks/Logiks-Core/wiki/Services"
+                    ]
                 ];
                 break;
             case "digioffice":case "bizsuite":
                 $data = [
-                    "Navigations"=>[
+                    "navigations"=>[
                         "label"=>"Navigations",
                         "icon"=>"bars",
                         "groups"=>false,
                     ],
-                    "Controller"=>[
+                    "controller"=>[
                         "label"=>"Controllers",
                         "icon"=>"code",
                         "groups"=>false,
                     ],
-                    "Helper"=>[
+                    "helper"=>[
                         "label"=>"Helpers",
                         "icon"=>"star",
                         "groups"=>false,
@@ -96,9 +115,59 @@ if(!function_exists("getCompsList")) {
                         "groups"=>true,
                         "help_link"=>"https://github.com/Logiks/Logiks-Core/wiki/Services"
                     ],
+                    "apisource"=>[
+                        "label"=>"API Sources",
+                        "icon"=>"link",
+                        "groups"=>true,
+                        "dependent_module"=>"apibox",
+                        "help_link"=>"https://github.com/Logiks/Logiks-Core/wiki/Services"
+                    ]
                 ];
                 break;
-            case "custom":
+            case "mapp":
+                $data = [
+                    "navigations"=>[
+                        "label"=>"Navigations",
+                        "icon"=>"bars",
+                        "groups"=>false,
+                    ],
+                    "controller"=>[
+                        "label"=>"Controllers",
+                        "icon"=>"code",
+                        "groups"=>false,
+                    ],
+                    "helper"=>[
+                        "label"=>"Helpers",
+                        "icon"=>"star",
+                        "groups"=>false,
+                    ],
+                    "component"=>[
+                        "label"=>"Components",
+                        "icon"=>"cube",
+                        "groups"=>true,
+                    ],
+                    "service"=>[
+                        "label"=>"Services",
+                        "icon"=>"rss",
+                        "groups"=>true,
+                        "help_link"=>"https://github.com/Logiks/Logiks-Core/wiki/Services"
+                    ],
+                    "apisource"=>[
+                        "label"=>"API Sources",
+                        "icon"=>"link",
+                        "groups"=>true,
+                        "dependent_module"=>"apibox",
+                        "help_link"=>"https://github.com/Logiks/Logiks-Core/wiki/Services"
+                    ],
+                    "mappSettings"=> [
+                        "label"=>"Mobile Settings",
+                        "icon"=>"link",
+                        "groups"=>true,
+                        "dependent_module"=>"mappSettings",
+                    ]
+                ];
+                break;
+            default:
                 $data = [
                     "controller"=>[
                         "label"=>"Controllers",
@@ -121,8 +190,26 @@ if(!function_exists("getCompsList")) {
                         "groups"=>true,
                         "help_link"=>"https://github.com/Logiks/Logiks-Core/wiki/Services"
                     ],
+                    "apisource"=>[
+                        "label"=>"API Sources",
+                        "icon"=>"link",
+                        "groups"=>true,
+                        "dependent_module"=>"apibox",
+                        "help_link"=>"https://github.com/Logiks/Logiks-Core/wiki/Services"
+                    ]
                 ];
                 break;
+        }
+        
+        foreach($data as $a=>$b) {
+            $data[$a] = array_merge([
+                    "dependent_module"=>"",
+                ], $b);
+            if($data[$a]['dependent_module'] && strlen($data[$a]['dependent_module'])>0) {
+                if(!checkModule($data[$a]['dependent_module'])) {
+                    unset($data[$a]);
+                }
+            }
         }
         
         return $data;

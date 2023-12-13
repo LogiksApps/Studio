@@ -15,23 +15,13 @@
 			    }
 			}
 		},
-		"studio1": {
-			"title": "Advanced",
+		"user": {
+			"title": "User",
 			"sidebar": {
-			    "studio": {
-			        "title": "Studio",
-			        "icon": "fa fa-cubes fa-fw",
-			        "src":"sidebarMenu"
-			    },
 			    "apps": {
 			        "title": "APPS",
 			        "icon": "fa fa-object-group fa-fw",
 			        "src":"sidebarApps"
-			    },
-			    "files": {
-			        "title": "SRC",
-			        "icon": "fa fa-folder fa-fw",
-			        "src":"sidebarObjects"
 			    }
 			}
 		},
@@ -55,8 +45,8 @@
 			    }
 			}
 		},
-		"studio2": {
-			"title": "Studio",
+		"modules": {
+			"title": "Modular",
 			"sidebar": {
 			    "studio": {
 			        "title": "Studio",
@@ -70,18 +60,38 @@
 			    }
 			}
 		},
-		"designer": {
-			"title": "Design Studio",
+		"Studio": {
+			"title": "Studio",
 			"required_module": "designStudio",
 			"dashboard": "designStudio"
 		},
-		"user": {
-			"title": "User",
+		"advanced": {
+			"title": "Advanced",
 			"sidebar": {
-			    "apps": {
-			        "title": "APPS",
+			    "studio": {
+			        "title": "",
+			        "icon": "fa fa-cubes fa-fw",
+			        "src":"sidebarMenu"
+			    },
+			    "src": {
+			        "title": "",
 			        "icon": "fa fa-object-group fa-fw",
-			        "src":"sidebarApps"
+			        "src":"sidebarObjects"
+			    },
+			    "mods": {
+			        "title": "",
+			        "icon": "fa fa-cube fa-fw",
+			        "src":"sidebarModules"
+			    },
+			    "files": {
+			        "title": "",
+			        "icon": "fa fa-folder fa-fw",
+			        "src":"sidebarFiles"
+			    },
+			    "db": {
+			        "title": "",
+			        "icon": "fa fa-database fa-fw",
+			        "src":"sidebarDB"
 			    }
 			}
 		}

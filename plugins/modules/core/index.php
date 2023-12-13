@@ -54,11 +54,11 @@ if(!function_exists("setupCMSEnviroment")) {
 		
 		$arr=[];
 		$siteList=[];
-		if(isset($_SESSION['SESS_PRIVILEGE_ID'])) {
-			if($_SESSION['SESS_PRIVILEGE_ID']===1) {
-					$arr=scandir(ROOT.APPS_FOLDER);
+		if(isset($_SESSION['SESS_PRIVILEGE_NAME'])) {
+			if($_SESSION['SESS_PRIVILEGE_NAME']==="root") {
+				$arr=scandir(ROOT.APPS_FOLDER);
 			} else {
-					$arr=$_SESSION['SESS_ACCESS_SITES'];
+				$arr=$_SESSION['SESS_ACCESS_SITES'];
 			}
 		}
 		foreach($arr as $b) {

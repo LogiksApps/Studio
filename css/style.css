@@ -941,7 +941,9 @@ body.no_sidebar #myTab {
     color: #000 !important;
     text-transform: lowercase;
     font-size: 18px;
-        
+}
+.system_stats_div_container .card-body .text-muted.text-uppercase {
+    text-transform: uppercase !important;
 }
 .system_stats_div_container .card-body .card-title {
            text-align: left;

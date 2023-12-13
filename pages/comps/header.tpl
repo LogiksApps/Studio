@@ -54,7 +54,7 @@
         <button onclick="openEStore()" type="button" class="btn btn-warning btn-search"><span class="fa fa-cubes"></span> eStore</button>
     </div>
     <div class="todoButton pull-right hidden-xs" style="">
-        <button onclick="openCMSTodos()" type="button" class="btn btn-info btn-search">@TODO</button>
+        <button onclick="openDevTodos()" type="button" class="btn btn-info btn-search">@TODO</button>
     </div>
   </div>
 </nav>

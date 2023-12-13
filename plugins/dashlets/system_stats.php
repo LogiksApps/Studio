@@ -212,8 +212,8 @@ main {
     margin-top: 10px;
 }
 </style>
-<div id='system_stats_div' class="row text-center system_stats">
-    <div id='system_stats_div_container' class='col-md-12 system_stats_div_container'>
+<div id='system_stats_div' class="text-center system_stats">
+    <div id='system_stats_div_container' class='row system_stats_div_container' style="margin: 0px 0px;">
         
     </div>
 </div>

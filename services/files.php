@@ -12,8 +12,9 @@ $_ENV['NOSCAN']=[
 		"tmp",
 		"temp",
 		".git",
-		".install",
-		".."
+// 		".install",
+		"..",
+		".",
 	];
 
 switch ($_REQUEST['action']) {
