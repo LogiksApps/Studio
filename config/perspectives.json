@@ -63,7 +63,29 @@
 		"studio": {
 			"title": "Studio",
 			"required_module": "designStudio",
-			"dashboard": "designStudio"
+			"dashboard": "designStudio",
+			"sidebar": {
+			    "studio": {
+			        "title": "",
+			        "icon": "fa fa-hamburger fa-fw",
+			        "src":"sidebarMenu"
+			    },
+			    "mods": {
+			        "title": "",
+			        "icon": "fa fa-cube fa-fw",
+			        "src":"sidebarModules"
+			    },
+			    "files": {
+			        "title": "",
+			        "icon": "fa fa-folder fa-fw",
+			        "src":"sidebarFiles"
+			    },
+			    "db": {
+			        "title": "",
+			        "icon": "fa fa-database fa-fw",
+			        "src":"sidebarDB"
+			    }
+			}
 		},
 		"advanced": {
 			"title": "Advanced",
