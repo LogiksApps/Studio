@@ -1,6 +1,6 @@
 {
 	"LIST": {
-		"studio": {
+		"classic": {
 			"title": "Classic",
 			"sidebar": {
 			    "studio": {
@@ -60,7 +60,7 @@
 			    }
 			}
 		},
-		"Studio": {
+		"studio": {
 			"title": "Studio",
 			"required_module": "designStudio",
 			"dashboard": "designStudio"
