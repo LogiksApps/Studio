@@ -7,7 +7,7 @@ $perspectiveList = perspectives_list();
 <ul id='perspectiveMenu' class="nav navbar-top-links navbar-left" data-toggle="tooltip" title='Perspective View - <?=toTitle($perspectiveActive)?>'>
 	<li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            <i class="fas fa-object-group"></i> <i class="fa fa-caret-down"></i>
+            <i class="fi fi-tr-object-group"></i> <i class="fi fi-tr-caret-down"></i>
         </a>
         <ul class="dropdown-menu">
             <?php

@@ -1,10 +1,10 @@
 {
-    "title": "Application Home",
+    "title": "Studio Home",
     "description": "",
     "keywords": "",
     "robot": "",
     "slug": "",
-    "template": "default",
+    "template": "application",
     "css": "style",
     "js_preload": "",
     "js_postload": "",

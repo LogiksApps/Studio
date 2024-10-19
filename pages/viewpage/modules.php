@@ -23,8 +23,6 @@ if(isset($slug["module"])) {
 		} else {
 			trigger_logikserror("Sorry, You don't have access to Module '{$slug["module"]}'.",E_ERROR,403);
 		}
-		//exit($modulePath);
-		//loadModule($slug["module"]);
 	} else {
 		trigger_logikserror("Sorry, Module '{$slug["module"]}' not found.",E_ERROR,404);
 	}

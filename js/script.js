@@ -12,6 +12,10 @@ $(function() {
   $("#leftMenuOpen").click(function() {
       $("body").toggleClass("no_sidebar");
   });
+  
+  $("#rightMenuOpen").click(function() {
+      $("#sidebarRight").toggleClass("is_visible");
+  });
 
   $('body').delegate(".datalink[data-type]","click",function(e) {
     type=$(this).data("type");
@@ -173,3 +177,27 @@ function showLoader(){
 function hideLoader(){
 	$("body .loader_bg").detach();
 }
+// $("body").delegate("#sidebarAccordion .panel-default>.panel-heading", "click", function(e){
+//   if ($('.panel-collapse').hasClass('in')){
+//      $(this).parent('body').addClass("off");
+// }
+// });
+// $('#sidebarAccordion .panel-default').each(function(){
+//     if($(this).find('.collapse').hasClass('in')) {
+//         $(this).parents('body').addClass("off");
+//     } 
+// });
+$(document).ready(function(){
+   $("body").addClass("opend")
+});
+
+$("body").delegate("#sidebarAccordion .mainTitle a[aria-expanded='true']", "click", function(e){
+    setTimeout(function () {
+        $("body").removeClass("opend")
+    }, 400);
+});
+
+
+$("body").delegate("#sidebarAccordion .mainTitle a[aria-expanded='false']", "click", function(e){
+    $("body").addClass("opend")
+});

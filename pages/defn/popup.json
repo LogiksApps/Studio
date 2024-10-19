@@ -1,9 +1,11 @@
 {
-    "title": "Module Popup",
+    "title": "Popup Loader",
     "description": "",
     "slug": "module",
     "template": "popup",
     "viewpage": "modules",
-    "enabled": true,
-    "access": "private"
+    "enabled": "true",
+    "access": "private",
+    "keywords": "",
+    "robot": ""
 }

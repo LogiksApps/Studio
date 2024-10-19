@@ -26,30 +26,39 @@ body.home #content>ul#myTab {left: 0px !important;}
 // printArray($sidebars);
 $firstOne = array_keys($sidebars)[0];
 ?>
-<ul id="sidebarTab" class="nav nav-tabs nav-justified <?=(count($sidebars)==1)?"hidden d-none":""?>" data-tabs="tabs">
+<div class="panel-group" id="sidebarAccordion">
     <?php
         foreach($sidebars as $src=>$srcConfig) {
             $icon = $srcConfig['icon'];
-            if($src==$firstOne)
-                echo "<li class='active' role='presentation'><a href='#sidebarTab-{$src}' data-toggle='tab'><i class='{$icon}'></i>&nbsp;"._ling($srcConfig['title'])."</a></li>";
-            else
-                echo "<li role='presentation'><a href='#sidebarTab-{$src}' data-toggle='tab'><i class='{$icon}'></i>&nbsp;"._ling($srcConfig['title'])."</a></li>";
-        }
-    ?>
-</ul>
-<div id="sidebarPane" class="tab-content noselect">
-    <?php
-        foreach($sidebars as $src=>$srcConfig) {
-            if($src==$firstOne)
-                echo "<div id='sidebarTab-{$src}' class='tab-pane active'>";
-            else
-                echo "<div id='sidebarTab-{$src}' class='tab-pane'>";
-            $srcArr = explode(".", $srcConfig['src']);
-            if(count($srcArr)>1)
-                loadPluginComponent($srcArr[0], $srcArr[1]);
-            else
-                loadWidget($srcConfig['src']);
-            echo "</div>";
+            
+            $openClassHeader = "";
+            $openClassBody = "";
+            $areaExpand = "";
+            if($src==$firstOne) {
+                $openClassHeader = " active";
+                $openClassBody = " in";
+                $areaExpand = "aria-expanded='true'";
+            }
+            ?>
+            <div class="panel panel-default ">
+                  <div class="panel-heading <?=$openClassHeader?>">
+                    <h4 class="panel-title <?=$openClassHeader?> mainTitle" >
+                      <a data-toggle="collapse" data-parent="#sidebarAccordion" <?=$areaExpand?> href="#collapse-<?=$src?>"><?="<i class='{$icon}'></i>&nbsp;"._ling($srcConfig['title'])?></a>
+                    </h4>
+                  </div>
+                  <div id="collapse-<?=$src?>" class="panel-collapse collapse <?=$openClassBody?> mainCollapse">
+                    <div class="panel-body">
+                        <?php
+                            $srcArr = explode(".", $srcConfig['src']);
+                            if(count($srcArr)>1)
+                                loadPluginComponent($srcArr[0], $srcArr[1]);
+                            else
+                                loadWidget($srcConfig['src']);
+                        ?>
+                    </div>
+                  </div>
+            </div>
+            <?php
         }
     ?>
 </div>

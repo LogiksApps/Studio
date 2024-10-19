@@ -20,7 +20,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-title" content="">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<!--<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>-->
+	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
 	
 	{$PAGE.CSS}
 	{$PAGE.JS_PRELOAD}
@@ -38,6 +38,9 @@
 		</div>
 		<div id='sidebar'>
 	    {component src='sidebar'}
+	    </div>
+	    <div id='sidebarRight'>
+	    {component src='sidebar_right'}
 	    </div>
 	    <div id="page-wrapper">
 	        {viewpage}

@@ -1,7 +1,7 @@
 @media(max-width:1400px){
-    .dashletContainer {
-            width: 84%;
-    }
+    /*.dashletContainer {*/
+    /*        width: 84%;*/
+    /*}*/
 }
 @media(max-width:1199px){
     .dashletContainer {
@@ -13,4 +13,10 @@
     .reportTable .table-tools .control-primebar{
             width: 1000px;
     }
+}
+@media(max-width:360px){
+   .login form {
+   
+    width: 300px;
+}
 }

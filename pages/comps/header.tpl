@@ -1,7 +1,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
 	<div class="navbar-header">
-        <div class='pull-left thumbnail'><img src='{loadMedia("media/logos/logiks.png")}' class='photo' /></div>
+        <div class='pull-left thumbnail'><img src='{loadMedia("logos/studio-logo-small.png")}' class='photo' /></div>
         <a class="navbar-brand">{$APPS_NAME} {$APPS_VERS}</a>
     </div>
     
@@ -27,34 +27,37 @@
 			</ul>
 
             <a href='{$WEBROOT}?site={$PAGE.forSite}' target='_blank' type="button" class="btn btn-default" title='Preview Site'>
-                <i class='fa fa-rocket' style='margin: 3px;'></i></a>
+                <i class='fi fi-tr-rocket-lunch' style='margin: 3px;'></i></a>
         </div>
-        <a href='#' type="button" class="btn btn-default btn-action btn-open-file" title='Open File'><i class='fa fa-folder-open' style='margin: 3px;'></i></a>
+        <a href='#' type="button" class="btn btn-default btn-action btn-open-file" title='Open File'><i class='fi fi-tr-folder-open' style='margin: 3px;'></i></a>
     </div>
 
     <ul id='toolsMenu' class="nav navbar-top-links navbar-right" style='text-align: right;'>
     	<li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <i class="fa fa-user fa-fw"></i> {$SESS_USER_NAME} <i class="fa fa-caret-down"></i>
+            <a class="dropdown-toggle userInfo" data-toggle="dropdown" href="#">
+                <i class="fi fi-tr-circle-user"></i> {$SESS_USER_NAME} <i class="fi fi-tr-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
                 <li><a href="{_link("modules/myAccounts")}"><i class="fa fa-user fa-fw"></i> My Profile</a></li>
                 <li><a href="{_link("modules/myPassword")}"><i class="fa fa-user fa-fw"></i> My Password</a></li>
                 <li class="divider"></li>
-                <li><a class='noauto' href="{$WEBROOT}logout.php?site=#SITENAME#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                <li><a class='noauto' href="{$WEBROOT}logout.php?site=#SITENAME#"><i class="fa fa-sign-out-alt fa-fw"></i> Logout</a>
                 </li>
             </ul>
         </li>
     </ul>
     
+    <div class="headerButton pull-right hidden-xs" style="">
+        <button id="rightMenuOpen" type="button" class="btn btn-warning btn-search btn-assist"><span class="fa fa-robot"></span></button>
+    </div>
     <div class="searchForm pull-right hidden-xs" style="">
         {pluginComponent src='codeSearch.searchbar'}
     </div>
     <div class="eStoreButton pull-right hidden-xs" style="">
-        <button onclick="openEStore()" type="button" class="btn btn-warning btn-search"><span class="fa fa-cubes"></span> eStore</button>
+        <button onclick="openEStore()" type="button" class="btn btn-warning btn-search"><span class="fi fi-tr-cubes"></span> eStore</button>
     </div>
     <div class="todoButton pull-right hidden-xs" style="">
-        <button onclick="openDevTodos()" type="button" class="btn btn-info btn-search">@TODO</button>
+        <button onclick="openDevTodos()" type="button" class="btn btn-info btn-search">@Todo</button>
     </div>
   </div>
 </nav>

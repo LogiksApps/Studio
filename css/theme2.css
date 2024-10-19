@@ -2,7 +2,7 @@
 @import url('fonts.css');
 
 body{
-   font-family: 'Mulish', sans-serif;
+       font-family: 'Mulish', sans-serif !important;
 }
 .sidebarMenu  .panel-default>.panel-heading {
     color: #333;
@@ -249,8 +249,8 @@ i.actionBtn {
 .site-select-form .dropdown-toggle{
         border-right: 0;
 }
-.searchForm, .eStoreButton,.todoButton {
-           margin-top: 8px;
+.searchForm, .eStoreButton,.todoButton,.headerButton {
+    margin-top: 8px;
     margin-right: 10px;
 }
 .searchForm .btn{
@@ -315,4 +315,234 @@ i.actionBtn {
     margin-top: 4px;
     margin-right: 2px;
     float: left;
+}
+/*------------sidebar-------------*/
+
+
+#header {
+    left: 0;
+}
+#sidebar{
+         top: 50px;
+    width: 52px;
+    background: #292828;
+    z-index: 99;
+    border-right: 1px solid rgb(255 255 255 / 11%);
+}
+#sidebar .navbar-header{
+        display: none;
+}
+#sidebarFileTree {
+    top: 98px;
+}
+.sidebarMenu,#sidebarFileTree{
+        position: static !important;
+}
+#sidebarTab{
+        display: flex;
+    flex-direction: column;
+}
+#sidebarPane .tab-pane{
+    position: absolute;
+    background: #929aad;
+    width: 190px;
+    top: 0;
+    left: 60px;
+    height: 100%;
+}
+#sidebarAccordion .mainCollapse, #sidebarAccordion .mainCollapse.collapsing{
+           position: fixed !important;
+    width: 268px;
+    background: #292828;
+    left: 52px;
+    top: 51px;
+    bottom: 0;
+    height: 100% !important;
+    
+}
+.navbar-static-top .navbar-header {
+    display: block !important;
+        width: auto !important;
+}
+button#leftMenuOpen {
+    display: none;
+}
+#sidebarAccordion .panel-default>.panel-heading{
+    background-color: transparent;
+}
+#sidebarAccordion .panel-default>.panel-heading .mainTitle a{
+    color: #c9c9c9;
+    text-decoration: none;
+    display: flex;
+    padding: 5px;
+    height: 35px;
+    width: 35px;
+}
+
+#sidebarAccordion .panel-default>.panel-heading.active .mainTitle a{
+         color: #ffffff;
+    background: #ff5f38;
+    border-radius: 5px;
+}
+#sidebarAccordion .panel-default>.panel-heading .mainTitle a[aria-expanded="true"]{
+             color: #ffffff;
+    background: #ff5f38;
+    border-radius: 5px;
+}
+#sidebarAccordion .panel-default>.panel-heading .mainTitle a[aria-expanded="false"]{
+     color: #c9c9c9;
+         background: transparent;
+}
+#header{
+        /*padding-left: 15px;*/
+}
+.mainCollapse  .panel-body {
+    padding: 10px 10px;
+}
+#sidebar .searchField input {
+    background: #3b3b3b;
+   
+}
+#header .navbar a {
+    color: white;
+}
+.site-select-form .dropdown-toggle {
+    border-right: 0;
+    color: #fff !important;
+}
+#header .navbar .btn-group a {
+    color: white;
+}
+#header .navbar{
+          background: #292828;
+    box-shadow: none;
+    border-bottom: 1px solid rgb(255 255 255 / 11%);
+}
+#header .site-select-form .btn-default{
+    background: #292828;
+        border-color: #434343;
+}
+#header .btn-action{
+     background: #292828;
+         border-color: #434343;
+}
+.todoButton .btn, .todoButton .btn:hover, .todoButton .btn:focus {
+    color: #51eba2;
+    background-color: #292828;
+    border-color: #406654;
+    font-size: 13px;
+}
+.eStoreButton .btn, .eStoreButton .btn:hover, .eStoreButton .btn:focus {
+       color: #f75000;
+    background-color: #292828;
+    border-color: #7a320f;
+    font-size: 14px;
+}
+.btn-primary.btn-search {
+    color: #1391dc;
+    background-color: #292828;
+    border-color: #005285;
+    font-weight: 700;
+    margin-right: 10px;
+}
+.headerButton .btn-assist {
+    background-color: #292828; 
+     margin-top: 3px; 
+}
+.navbar-header .thumbnail{
+           margin-top: 8px;
+    margin-left: 8px;
+    height: 31px;
+}
+.dropdown-menu{
+   
+    background-color: #292828;
+}
+ #page-wrapper{
+        margin: 0 0 0 52px;
+}
+
+.opend #page-wrapper{
+        margin: 0 0 0 320px;
+}
+body.home #content>ul#myTab{
+        left: 52px;
+}
+body.home.opend #content>ul#myTab{
+        left: 320px;
+}
+#sidebarAccordion .panel-default>.panel-heading .mainTitle a i{
+        font-size: 23px;
+}
+#sidebarAccordion .panel-default>.panel-heading{
+       padding: 3px 6px;
+}
+#sidebarAccordion .sidebarTree .panel-default>.panel-heading {
+    padding: 6px 6px;
+}
+div#sidebarAccordion {
+    padding-top: 6px;
+}
+#header .dropdown-menu>li>a:focus, #header .dropdown-menu>li>a:hover{
+    background-color: #363636;
+}
+
+
+#header .navbar .btn-group a i,#header .btn-action i {
+    font-size: 16px;
+}
+#header .site-select-form a, #header .btn-action{
+        padding: 8px 8px;
+}
+#header .navbar .btn-group a i{
+        color: #00dbef;
+}
+#header .btn-action i{
+        color: #ffb300;
+}
+#header .nav>li>a:focus, #header .nav>li>a:hover {
+    color: #e5e5e5;
+}
+#header .nav>li>a:focus, #header .nav>li>a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+#header .userInfo>i:first-child {
+    font-size: 18px;
+    vertical-align: -3px;
+    margin-right: 3px;
+}
+#header .userInfo>i:last-child{
+        vertical-align: -4px;
+}
+#header .navbar-default .navbar-brand:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 14px;
+    background: rgb(255 255 255 / 44%);
+    right: 0;
+    top: 18px;
+}
+#header .navbar-default .navbar-brand {
+    position: relative;
+}
+.dashboard .container-fluid{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+#sidebarDBTree .panel-default>.panel-heading {
+    padding: 8px 6px;
+}
+#header .dropdown-user li{
+        border-bottom: 1px solid #2d2929 !important;
+}
+body.login {
+        background: url(images/studio-login-banner.jpg) center center no-repeat;
+}
+.login form h1{
+        color: #ffffff;
+}
+.login input[type=submit]{
+        background: #d75b00;
 }

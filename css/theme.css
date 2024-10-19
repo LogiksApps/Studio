@@ -57,6 +57,20 @@
     color: white;
 }
 
+#sidebarRight {
+    position: fixed;
+    right: -600px;
+    top: 50px;
+    bottom: 0px;
+    width: 600px;
+    z-index: 99999999999999;
+    background: white;
+    border-left: 1px solid #DEDEDE;
+    transition: right 400ms ease 0ms;
+}
+#sidebarRight.is_visible {
+    right: 0px;
+}
 .box .box-content {
   border: 1px solid #dddddd;
   background: white;
@@ -68,4 +82,9 @@
 .file-preview-thumbnails img, .field-container img {
     max-width: 100%;
     max-height: 300px;
+}
+.mainCollapse .panel-body {
+    padding: 10px 10px;
+    max-height: 90vh;
+    overflow: auto;
 }

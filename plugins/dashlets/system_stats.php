@@ -22,23 +22,23 @@ h5,
 
 @media (min-width: 992px) {
   
-  .col-lg-6 {
-    max-width: 50%;
-    flex: 0 0 50%;
-  }
+  /*.col-lg-6 {*/
+  /*  max-width: 50%;*/
+  /*  flex: 0 0 50%;*/
+  /*}*/
 }
 
 @media (min-width: 1200px) {
   
-  .col-xl-3 {
-    max-width: 25%;
-    flex: 0 0 25%;
-  }
+  /*.col-xl-3 {*/
+  /*  max-width: 25%;*/
+  /*  flex: 0 0 25%;*/
+  /*}*/
   
-  .col-xl-6 {
-    max-width: 50%;
-    flex: 0 0 50%;
-  }
+  /*.col-xl-6 {*/
+  /*  max-width: 50%;*/
+  /*  flex: 0 0 50%;*/
+  /*}*/
 }
 
 
@@ -236,7 +236,7 @@ function loadSystemStats() {
 		    }
 		    if(row.subtext==null) row.subtext = "&nbsp;";
 		    
-		    $("#system_stats_div_container").append(`<div class="col-xl-3 col-lg-6">
+		    $("#system_stats_div_container").append(`<div class="col-xl-3 col-lg-3 col-md-6">
           <div class="card card-stats mb-4 mb-xl-0">
             <div class="card-body">
                 <div class="icon icon-shape bg-warning text-white rounded-circle shadow pull-left">

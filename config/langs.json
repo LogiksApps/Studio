@@ -1,0 +1,34 @@
+{
+    "LANGS": {
+        "logiks-php": {
+            "label": "",
+            "descs": "",
+            "boilerplate": ""
+        },
+        "logiks-nodejs": {
+            "label": "",
+            "descs": "",
+            "boilerplate": ""
+        },
+        "logiks-cordova": {
+            "label": "",
+            "descs": "",
+            "boilerplate": ""
+        },
+        "logiks-react": {
+            "label": "",
+            "descs": "",
+            "boilerplate": ""
+        },
+        "logiks-python": {
+            "label": "",
+            "descs": "",
+            "boilerplate": ""
+        },
+        "freeform": {
+            "label": "",
+            "descs": "",
+            "boilerplate": ""
+        }
+    }
+}

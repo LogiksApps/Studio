@@ -10,7 +10,7 @@
     </div>
     {/if}
     <h1 id="litheader">
-        <img src='media/logos/logiks.png' />
+        <img src='{loadmedia("logos/studio-logo-small.png")}' />
         <span> {$APPS_NAME} {$APPS_VERS}</span>
     </h1>
     <div class="inset">

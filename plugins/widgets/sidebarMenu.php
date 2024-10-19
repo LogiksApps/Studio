@@ -55,9 +55,9 @@ function sortMenus($a,$b) {
       echo "  <div class='panel-heading' role='tab' id='$hash'>";
       echo "    <h4 class='panel-title'>";
       echo "      <a role='button' data-toggle='collapse' data-parent='#sidebarMenu' href='#collapse{$hash}' aria-expanded='true' aria-controls='collapseOne'>";
-      echo "        <i class='fa fa-folder'></i> $category";
+      echo "        <i class='fi fi-tr-tab-folder'></i> $category";
       echo "      </a>";
-      echo "      <i class='fa fa-angle-right pull-right'></i>";
+      echo "      <i class='fi fi-tr-angle-small-right pull-right'></i>";
       echo "    </h4>";
       echo "  </div>";
       echo "  <div id='collapse{$hash}' class='panel-collapse collapse' role='tabpanel' aria-labelledby='$hash'>";
